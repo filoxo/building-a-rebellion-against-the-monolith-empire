@@ -1,5 +1,54 @@
 import RebelAlliance from "./rebel_alliance.svg";
 
-# Building a Rebellion against the Monolith
+<h1 style={{ transform: "perspective(400px) rotateX(45deg)" }}>
 
-<RebelAlliance width={80} height={80} className="mx-auto" />
+<span>Building a Rebellion against</span>
+
+<RebelAlliance
+  width="7rem"
+  height="7rem"
+  className="mx-auto"
+  aria-hidden="true"
+/>
+
+<span>the Monolith Empire</span>
+
+</h1>
+
+---
+
+# What are microfrontends?
+
+- loosely coupled, highly cohesive
+- enables scalability
+- team autonomy
+  - independent deployments
+
+---
+
+## Benefits
+
+1. Independent deployments
+2. Migration
+   - Eat the 🐘 aka the Strangler Pattern
+3. Experimentation
+4. Resilience
+
+---
+
+Conways law states that the architecture of your system will eventually pattern your communication structure.
+In other words, trying to move to microservices, without also changing your communication structure, will be futile.
+
+---
+
+import { TwitterTweetEmbed } from "react-twitter-embed";
+
+<TwitterTweetEmbed tweetId={"1150488911744917505"} />
+
+---
+
+# Resources
+
+- [micro-frontends.org](https://micro-frontends.org/)
+- ["I don't understand micro-frontends" by Luca Mezzalira](https://medium.com/@lucamezzalira/i-dont-understand-micro-frontends-88f7304799a9)
+- ["Bad Assumptions about Microfrontends" by Carlos Filoteo (myself)](https://filoxo.github.io/bad-assumptions-about-microfrontends/)
