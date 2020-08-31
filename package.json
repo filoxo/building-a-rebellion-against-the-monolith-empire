@@ -26,6 +26,7 @@
     "prism-react-renderer": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-twitter-embed": "^3.0.3",
     "remark-attr": "^0.10.0",
     "tailwindcss": "^1.4.4",
     "wouter": "^2.5.1"
