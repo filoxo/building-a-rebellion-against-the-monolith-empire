@@ -25,6 +25,10 @@ render(
       Aside,
       code: Code,
       inlineCode: Base("code", "bg-gray-200 px-1 rounded"),
+      blockquote: Base(
+        "blockquote",
+        "bg-gray-200 py-1 px-2 w-1/2 mx-auto rounded border-t-4 border-b-4 border-gray-500 my-2"
+      ),
       a: A,
       h1: Base("h1", "text-center text-4xl"),
       h2: Base("h2", "text-center text-3xl"),

@@ -4,10 +4,13 @@ The useAppearSequence hook modifies the visibility of this component directly.
 */
 import React from "react";
 
-export default function Appear({ children }) {
+export default function Appear({ order, ...props }) {
   return (
-    <span className="invisible" data-appear="false">
-      {children}
-    </span>
+    <span
+      {...props}
+      className="invisible"
+      data-appear="false"
+      data-appear-order={order}
+    />
   );
 }

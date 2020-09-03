@@ -19,31 +19,137 @@ import RebelAlliance from "./rebel_alliance.svg";
 
 # What are microfrontends?
 
-- loosely coupled, highly cohesive
-- enables scalability
-- team autonomy
-  - independent deployments
+---
+
+import { TwitterTweetEmbed } from "react-twitter-embed";
+
+<TwitterTweetEmbed tweetId="1150488911744917505" options={{ dnt: true }} />
 
 ---
 
-## Benefits
+# What are microfrontends?
+
+**_Microservices patterns applied to frontend engineering_**{.text-center .block .my-4}
+
+- loosely coupled services, highly cohesive code
+- enables scalability
+- fosters team autonomy
+
+---
+
+# Benefits
 
 1. Independent deployments
 2. Migration
-   - Eat the 🐘 aka the Strangler Pattern
+   - "Eat the 🐘" aka the 'Strangler Pattern'
 3. Experimentation
 4. Resilience
 
 ---
 
-Conways law states that the architecture of your system will eventually pattern your communication structure.
-In other words, trying to move to microservices, without also changing your communication structure, will be futile.
+import RebelBase from "./rebel-base.jpg";
+
+<div
+  style={{
+    width: "100vw",
+    height: "100vh",
+    backgroundImage: `url(${RebelBase})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }}
+>
+  <img
+    src="https://financesonline.com/uploads/2019/10/Canopy-logo1.png"
+    className="mx-auto w-1/5"
+  />
+</div>
 
 ---
 
-import { TwitterTweetEmbed } from "react-twitter-embed";
+<p className="text-4xl text-center" style={{ color: "rgb(0, 17, 255)" }}>
+  single-spa
+</p>
 
-<TwitterTweetEmbed tweetId={"1150488911744917505"} />
+![single-spa logo](https://single-spa.js.org/img/logo-white-bgblue.svg){.mx-auto width="100"}
+
+<p className="font-light">"A JavaScript router for frontend microservices"</p>
+
+---
+
+import ComponentModel from "./component-model.png";
+
+<!-- https://excalidraw.com/#json=6328682335436800,YBcbfxpnnD1zZpREervmMA -->
+
+# the component model
+
+<img
+  src={ComponentModel}
+  className="mx-auto"
+  style={{ height: "50vh" }}
+  alt=""
+/>
+
+---
+
+import SingleSpaLifecyclesModel from "./single-spa-lifecycles-model.png";
+
+# single-spa lifecycles
+
+<img
+  src={SingleSpaLifecyclesModel}
+  className="mx-auto"
+  style={{ height: "50vh" }}
+  alt=""
+/>
+
+---
+
+import { InitialPageLayout } from "./PageLayouts";
+
+<InitialPageLayout />
+
+---
+
+import { AssignedPageLayout } from "./PageLayouts";
+
+<AssignedPageLayout />
+
+---
+
+import { ShipsPageLayout } from "./PageLayouts";
+
+<ShipsPageLayout />
+
+---
+
+<div
+  style={{
+    width: "100vw",
+    height: "100vh",
+    backgroundImage:
+      "url(https://cdn.newsapi.com.au/image/v1/0f21f7db89ac6ec923ae8c5c2b185a95)",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  }}
+></div>
+
+---
+
+import DeathStarPlans from "./deathstar-plans.gif";
+
+<div
+  style={{
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "#000",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <img src={DeathStarPlans} />
+</div>
 
 ---
 
@@ -51,4 +157,19 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 - [micro-frontends.org](https://micro-frontends.org/)
 - ["I don't understand micro-frontends" by Luca Mezzalira](https://medium.com/@lucamezzalira/i-dont-understand-micro-frontends-88f7304799a9)
+- ["Developing and Deploying Micro-Frontends With Single-Spa" by Tyler Hawkins](https://medium.com/@thawkin3/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d)
 - ["Bad Assumptions about Microfrontends" by Carlos Filoteo (myself)](https://filoxo.github.io/bad-assumptions-about-microfrontends/)
+
+---
+
+## Conways law
+
+> <span className="text-gray-500">"</span>the architecture of your system will
+> eventually pattern your communication structure
+> <span className="text-gray-500">"</span>
+
+<p className="text-center text-sm w-3/4 mx-auto">
+
+In other words, moving to microservices _requires_ changing your communication structure to succeed.
+
+</p>
