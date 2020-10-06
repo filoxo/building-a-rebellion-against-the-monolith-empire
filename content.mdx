@@ -1,6 +1,6 @@
-import RebelAlliance from "./rebel_alliance.svg";
+import RebelAlliance from './rebel_alliance.svg';
 
-<h1 style={{ transform: "perspective(400px) rotateX(45deg)" }}>
+<h1 className="text-5xl" style={{ transform: "perspective(400px) rotateX(40deg)" }}>
 
 <span>Building a Rebellion against</span>
 
@@ -21,19 +21,19 @@ import RebelAlliance from "./rebel_alliance.svg";
 
 ---
 
-import { TwitterTweetEmbed } from "react-twitter-embed";
+<p className="text-center block text-xl">microfrontends are</p>
 
-<TwitterTweetEmbed tweetId="1150488911744917505" options={{ dnt: true }} />
-
----
-
-# What are microfrontends?
-
-**_Microservices patterns applied to frontend engineering_**{.text-center .block .my-4}
+**Microservices patterns applied to frontend engineering**{.text-center .block .mb-4}
 
 - loosely coupled services, highly cohesive code
 - enables scalability
 - fosters team autonomy
+
+---
+
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+<TwitterTweetEmbed tweetId="1150488911744917505" options={{ dnt: true }} />
 
 ---
 
@@ -47,15 +47,15 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 ---
 
-import RebelBase from "./rebel-base.jpg";
+import RebelBase from './rebel-base.jpg';
 
 <div
   style={{
-    width: "100vw",
-    height: "100vh",
+    width: '100vw',
+    height: '100vh',
     backgroundImage: `url(${RebelBase})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
   }}
 >
   <img
@@ -66,7 +66,7 @@ import RebelBase from "./rebel-base.jpg";
 
 ---
 
-<p className="text-4xl text-center" style={{ color: "rgb(0, 17, 255)" }}>
+<p className="text-4xl text-center" style={{ color: 'rgb(0, 17, 255)' }}>
   single-spa
 </p>
 
@@ -76,7 +76,7 @@ import RebelBase from "./rebel-base.jpg";
 
 ---
 
-import ComponentModel from "./component-model.png";
+import ComponentModel from './component-model.png';
 
 <!-- https://excalidraw.com/#json=6328682335436800,YBcbfxpnnD1zZpREervmMA -->
 
@@ -85,53 +85,93 @@ import ComponentModel from "./component-model.png";
 <img
   src={ComponentModel}
   className="mx-auto"
-  style={{ height: "50vh" }}
+  style={{ height: '50vh' }}
   alt=""
 />
 
 ---
 
-import SingleSpaLifecyclesModel from "./single-spa-lifecycles-model.png";
+import SingleSpaLifecyclesModel from './single-spa-lifecycles-model.png';
 
 # single-spa lifecycles
 
 <img
   src={SingleSpaLifecyclesModel}
   className="mx-auto"
-  style={{ height: "50vh" }}
+  style={{ height: '50vh' }}
   alt=""
 />
 
 ---
 
-import { InitialPageLayout } from "./PageLayouts";
+import { InitialPageLayout } from './PageLayouts';
 
 <InitialPageLayout />
 
 ---
 
-import { AssignedPageLayout } from "./PageLayouts";
+import { AssignedPageLayout } from './PageLayouts';
 
 <AssignedPageLayout />
 
 ---
 
-import { ShipsPageLayout } from "./PageLayouts";
+import { ShipsPageLayout } from './PageLayouts';
 
 <ShipsPageLayout />
 
 ---
 
-import DeathStarPlans from "./deathstar-plans.gif";
+import SvelteSvg from './img/svelte.svg';
+
+# Ecosystem
+
+<div className="flex items-center justify-between">
+
+<img
+  alt="Reactjs"
+  src="https://camo.githubusercontent.com/f81df8111223bbd67da1e3514bea41d5a63ff89a/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f72656163742e737667"
+  className="w-1/5"
+/>
+
+<img
+  alt="Vuejs"
+  src="https://camo.githubusercontent.com/e47ae34fd825cb4bbc9cd3320a4bfe6bf0899381/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f7675652e737667"
+  className="w-1/5"
+/>
+
+<img
+  alt="Angular"
+  src="https://camo.githubusercontent.com/37cba63c9b85334eba8e1cd06f140484792327b6/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f616e67756c61722e737667"
+  className="w-1/5"
+/>
+
+<div className="w-1/5 px-3">
+  <SvelteSvg />
+</div>
+
+</div>
+
+## Others
+
+- AngularJS
+- Cycle
+- Preact
+- Alpinejs
+- more at [https://single-spa.js.org/docs/ecosystem/]()
+
+---
+
+import DeathStarPlans from './deathstar-plans.gif';
 
 <div
   style={{
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "#000",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: '#000',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }}
 >
   <img src={DeathStarPlans} />
@@ -141,13 +181,13 @@ import DeathStarPlans from "./deathstar-plans.gif";
 
 <div
   style={{
-    width: "100vw",
-    height: "100vh",
+    width: '100vw',
+    height: '100vh',
     backgroundImage:
-      "url(https://cdn.newsapi.com.au/image/v1/0f21f7db89ac6ec923ae8c5c2b185a95)",
-    backgroundPosition: "center",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
+      'url(https://cdn.newsapi.com.au/image/v1/0f21f7db89ac6ec923ae8c5c2b185a95)',
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
   }}
 ></div>
 
@@ -159,4 +199,3 @@ import DeathStarPlans from "./deathstar-plans.gif";
 - ["I don't understand micro-frontends" by Luca Mezzalira](https://medium.com/@lucamezzalira/i-dont-understand-micro-frontends-88f7304799a9)
 - ["Developing and Deploying Micro-Frontends With Single-Spa" by Tyler Hawkins](https://medium.com/@thawkin3/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d)
 - ["Bad Assumptions about Microfrontends" by Carlos Filoteo (myself)](https://filoxo.github.io/bad-assumptions-about-microfrontends/)
-- Ask Q's on #ask-web-platform

@@ -128,7 +128,7 @@ export function ShipsPageLayout() {
           }}
         >
           <XWing width="4rem" className="mx-auto" aria-hidden="true" />
-          <ul class="text-sm list list-disc">
+          <ul className="text-sm list list-disc">
             <li>fastest</li>
             <li>small impact</li>
           </ul>
@@ -141,7 +141,7 @@ export function ShipsPageLayout() {
           }}
         >
           <YWing width="5rem" className="mx-auto" aria-hidden="true" />
-          <ul class="text-sm list list-disc">
+          <ul className="text-sm list list-disc">
             <li>fast</li>
             <li>stable</li>
           </ul>
@@ -150,7 +150,7 @@ export function ShipsPageLayout() {
           style={{ backgroundColor: "lightblue", color: "royalblue" }}
         >
           <BWing width="3rem" className="" aria-hidden="true" />
-          <ul class="text-sm list list-disc ml-4">
+          <ul className="text-sm list list-disc ml-4">
             <li>slow</li>
             <li>large impact</li>
           </ul>
