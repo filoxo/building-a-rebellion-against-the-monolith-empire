@@ -62,11 +62,12 @@
 
 ---
 
-- we are almost here, were we are all involved in breaking up the monolith
+- we are here
+- we know and understand our monolith
 
 ---
 
-- we have the plans to take down the Death Star
+- Soon, all teams will be involved in breaking up the monolith
 
 ---
 
