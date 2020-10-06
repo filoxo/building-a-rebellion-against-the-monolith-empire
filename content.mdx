@@ -1,5 +1,7 @@
 import RebelAlliance from './rebel_alliance.svg';
 
+<div className="w-screen h-screen flex items-center justify-center text-white bg-black">
+
 <h1 className="text-5xl" style={{ transform: "perspective(400px) rotateX(40deg)" }}>
 
 <span>Building a Rebellion against</span>
@@ -14,6 +16,8 @@ import RebelAlliance from './rebel_alliance.svg';
 <span>the Monolith Empire</span>
 
 </h1>
+
+</div>
 
 ---
 
@@ -35,6 +39,12 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 <TwitterTweetEmbed tweetId="1150488911744917505" options={{ dnt: true }} />
 
+<p className="sr-only">
+  A tweet from @markdalgleish that reads, "Back end devs: Front end isn't real
+  engineering. Front end devs: *Bring engineering principles to front end* Back
+  end devs: Front end is too complicated." shared on Jul 14, 2019.
+</p>
+
 ---
 
 # Benefits
@@ -50,17 +60,21 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 import RebelBase from './rebel-base.jpg';
 
 <div
+  className="w-screen h-screen bg-center bg-cover"
   style={{
-    width: '100vw',
-    height: '100vh',
     backgroundImage: `url(${RebelBase})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
   }}
 >
+  <p className="sr-only">
+    single-spa got its start at a scrappy startup (of rebels) named Canopy. It
+    was born out of Canopy's desire to use React + react-router instead of being
+    forever stuck with AngularJS + ui-router application. single-spa is now a
+    mature library that enables microfrontends.
+  </p>
   <img
     src="https://financesonline.com/uploads/2019/10/Canopy-logo1.png"
     className="mx-auto w-1/5"
+    alt=""
   />
 </div>
 
@@ -86,7 +100,7 @@ import ComponentModel from './component-model.png';
   src={ComponentModel}
   className="mx-auto"
   style={{ height: '50vh' }}
-  alt=""
+  alt="This diagram shows that React + ReactDOM have a render method to put an application on the page. react-router then uses the current URL to mount and unmount components conditionally. The objective is to highlight that render, mount, and unmount are lifecycles of the component model."
 />
 
 ---
@@ -99,12 +113,20 @@ import SingleSpaLifecyclesModel from './single-spa-lifecycles-model.png';
   src={SingleSpaLifecyclesModel}
   className="mx-auto"
   style={{ height: '50vh' }}
-  alt=""
+  alt="This diagram shows single-spa lifecycles, based on the component model. single-spa is the top-level router and applications must implement bootstrap, mount, and unmount lifecycles. Then single-spa will bootstrap applications once, and then mount and unmount them based on the current route."
 />
 
 ---
 
 import { InitialPageLayout } from './PageLayouts';
+
+<p className="sr-only">
+  So let's go back to a monolith. Have you ever worked on a codebase that had
+  parts of it owned by others? For example, Team X owns the left nav. Due to
+  politics, Team Y owns the Main section but not really because of external
+  reasons. And lastly it is completely unclear who owns the Top Nav because
+  everyone contributes to it but no one team is it's owner.
+</p>
 
 <InitialPageLayout />
 
@@ -112,11 +134,34 @@ import { InitialPageLayout } from './PageLayouts';
 
 import { AssignedPageLayout } from './PageLayouts';
 
+<p className="sr-only">
+  In a single-spa setup, you could have clear divisions of the applications; and
+  therefore clear ownership of specific features in the codebase. These teams
+  are enabled to be more autonomous. This image shows the same sections but
+  assigned to Red Squad, Gold Squad, and Blue Squad.
+</p>
+
 <AssignedPageLayout />
 
 ---
 
 import { ShipsPageLayout } from './PageLayouts';
+
+<p className="sr-only">
+  Autonomous teams enable independent code deployments. A team can decide how
+  best to develop their feature. single-spa's lifecycles abstract the component
+  model so you can use just about any modern framework to develop a
+  microfrontend. For example Red Squad can choose an X-wing, the fastest ship
+  available but doesn't have a large impact. Gold Squad can make use of a
+  Y-wing, a fast ship that is good for everyday missions. And Blue Squad can use
+  a B-wing, a slow ship that has a large impact.
+</p>
+
+<p className="sr-only">
+  Additional shared modules and utilities (Millenium Falcon) can also be helpful
+  in fighting the Empire by centralizing shared logic and standardizing on
+  libraries so teams can move more quickly.
+</p>
 
 <ShipsPageLayout />
 
@@ -147,53 +192,61 @@ import SvelteSvg from './img/svelte.svg';
 />
 
 <div className="w-1/5 px-3">
-  <SvelteSvg />
+  <SvelteSvg aria-label="Svelte" aria-role="image" />
 </div>
 
 </div>
 
-## Others
+<div className="flex justify-center">
 
 - AngularJS
-- Cycle
+- Web Components
 - Preact
 - Alpinejs
-- more at [https://single-spa.js.org/docs/ecosystem/]()
+
+</div>
+
+[https://single-spa.js.org/docs/ecosystem](){.text-center .block}
 
 ---
 
 import DeathStarPlans from './deathstar-plans.gif';
 
-<div
-  style={{
-    width: '100vw',
-    height: '100vh',
-    backgroundColor: '#000',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }}
->
-  <img src={DeathStarPlans} />
+<div className="w-screen h-screen flex items-center justify-center bg-black">
+  <img
+    src={DeathStarPlans}
+    alt="Image showing rudimentary Death Star plans, analogous to understading your monolith before breaking it up."
+  />
 </div>
 
 ---
 
 <div
+  className="w-screen h-screen bg-center bg-no-repeat bg-contain"
   style={{
-    width: '100vw',
-    height: '100vh',
     backgroundImage:
       'url(https://cdn.newsapi.com.au/image/v1/0f21f7db89ac6ec923ae8c5c2b185a95)',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
   }}
-></div>
+>
+  <p className="sr-only">
+    Once you understand the monolith, you can begin plans to break it up into
+    applications, utility modules, and shared dependencies. This architecture
+    will also require changes to engineering culture and development workflows.
+    All of those are tradeoffs to using microfrontends.
+  </p>
+</div>
 
 ---
 
-# Resources
+# single-spa Resources
+
+- [Recommended Setup](https://single-spa.js.org/docs/recommended-setup/) - architecture overview
+- [create-single-spa](https://single-spa.js.org/docs/create-single-spa/) - utility to generate starter code
+- [github.com/single-spa/single-spa](https://github.com/single-spa/single-spa) - many active projects
+
+---
+
+# Additional Resources
 
 - [micro-frontends.org](https://micro-frontends.org/)
 - ["I don't understand micro-frontends" by Luca Mezzalira](https://medium.com/@lucamezzalira/i-dont-understand-micro-frontends-88f7304799a9)
