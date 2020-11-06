@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-size: 20px;
+}
+
+/* Print styles */
+@media print {
+  [data-appear='false'] {
+    visibility: visible;
+  }
+  a[href]::after {
+    content: ' [' attr(href) ']';
+    font-size: 0.75rem;
+  }
+  .slide {
+    opacity: 1;
+    position: static;
+    transform: none;
+  }
+  .deck {
+    overflow: visible;
+  }
+  .invisible {
+    visibility: visible;
+  }
+}
