@@ -1,37 +1,37 @@
-import React from "react";
-import RebelAlliance from "./rebel_alliance.svg";
-import XWing from "./x-wing.svg";
-import YWing from "./y-wing.svg";
-import BWing from "./b-wing.svg";
-import MillenniumFalcon from "./millennium-falcon.svg";
-import Appear from "./components/Appear";
+import React from 'react';
+import RebelAlliance from './img/rebel_alliance.svg';
+import XWing from './img/x-wing.svg';
+import YWing from './img/y-wing.svg';
+import BWing from './img/b-wing.svg';
+import MillenniumFalcon from './img/millennium-falcon.svg';
+import Appear from './components/Appear';
 
 const Grid = ({ style, ...props }) => (
   <div
     {...props}
     style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(3, 1fr)",
-      gridTemplateRows: "repeat(4, 1fr)",
-      gridColumnGap: "0px",
-      gridRowGap: "0px",
-      width: "80vw",
-      height: "50vh",
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateRows: 'repeat(4, 1fr)',
+      gridColumnGap: '0px',
+      gridRowGap: '0px',
+      width: '80vw',
+      height: '50vh',
       ...style,
     }}
   />
 );
 const inlineFlex = {
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const SectionTop = ({ style, ...props }) => (
   <div
     {...props}
     style={{
-      gridArea: "1 / 1 / 2 / 5",
+      gridArea: '1 / 1 / 2 / 5',
       ...inlineFlex,
       ...style,
     }}
@@ -42,7 +42,7 @@ const SectionLeft = ({ style, ...props }) => (
   <div
     {...props}
     style={{
-      gridArea: "2 / 1 / 5 / 2",
+      gridArea: '2 / 1 / 5 / 2',
       ...inlineFlex,
       ...style,
     }}
@@ -53,7 +53,7 @@ const SectionRight = ({ style, ...props }) => (
   <div
     {...props}
     style={{
-      gridArea: "2 / 2 / 5 / 5",
+      gridArea: '2 / 2 / 5 / 5',
       ...inlineFlex,
       ...style,
     }}
@@ -63,13 +63,13 @@ const SectionRight = ({ style, ...props }) => (
 export function InitialPageLayout() {
   return (
     <Grid>
-      <SectionLeft style={{ backgroundColor: "silver" }}>
+      <SectionLeft style={{ backgroundColor: 'silver' }}>
         <Appear>TEAM X</Appear>
       </SectionLeft>
-      <SectionRight style={{ backgroundColor: "gainsboro" }}>
+      <SectionRight style={{ backgroundColor: 'gainsboro' }}>
         <Appear>TEAM Y (but not really)</Appear>
       </SectionRight>
-      <SectionTop style={{ backgroundColor: "dimgray" }}>
+      <SectionTop style={{ backgroundColor: 'dimgray' }}>
         <Appear>???</Appear>
       </SectionTop>
     </Grid>
@@ -79,7 +79,7 @@ export function InitialPageLayout() {
 export function AssignedPageLayout() {
   return (
     <Grid>
-      <SectionLeft style={{ backgroundColor: "lightpink" }}>
+      <SectionLeft style={{ backgroundColor: 'lightpink' }}>
         <Appear>
           <RebelAlliance
             width="2rem"
@@ -90,7 +90,7 @@ export function AssignedPageLayout() {
           />
         </Appear>
       </SectionLeft>
-      <SectionRight style={{ backgroundColor: "palegoldenrod" }}>
+      <SectionRight style={{ backgroundColor: 'palegoldenrod' }}>
         <Appear>
           <RebelAlliance
             width="2rem"
@@ -101,7 +101,7 @@ export function AssignedPageLayout() {
           />
         </Appear>
       </SectionRight>
-      <SectionTop style={{ backgroundColor: "lightblue" }}>
+      <SectionTop style={{ backgroundColor: 'lightblue' }}>
         <Appear>
           <RebelAlliance
             width="2rem"
@@ -122,9 +122,9 @@ export function ShipsPageLayout() {
       <Grid>
         <SectionLeft
           style={{
-            backgroundColor: "lightpink",
-            flexDirection: "column",
-            color: "red",
+            backgroundColor: 'lightpink',
+            flexDirection: 'column',
+            color: 'red',
           }}
         >
           <XWing width="4rem" className="mx-auto" aria-hidden="true" />
@@ -135,9 +135,9 @@ export function ShipsPageLayout() {
         </SectionLeft>
         <SectionRight
           style={{
-            backgroundColor: "palegoldenrod",
-            flexDirection: "column",
-            color: "goldenrod",
+            backgroundColor: 'palegoldenrod',
+            flexDirection: 'column',
+            color: 'goldenrod',
           }}
         >
           <YWing width="5rem" className="mx-auto" aria-hidden="true" />
@@ -147,7 +147,7 @@ export function ShipsPageLayout() {
           </ul>
         </SectionRight>
         <SectionTop
-          style={{ backgroundColor: "lightblue", color: "royalblue" }}
+          style={{ backgroundColor: 'lightblue', color: 'royalblue' }}
         >
           <BWing width="3rem" className="" aria-hidden="true" />
           <ul className="text-sm list list-disc ml-4">
