@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "jest-process-manager": "^0.2.5",
-    "playwright": "^1.2.1",
+    "playwright": "^1.13.1",
     "playwright-testing-library": "^2.2.0"
   }
 }
