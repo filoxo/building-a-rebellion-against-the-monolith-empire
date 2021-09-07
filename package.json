@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "parcel build index.html",
-    "start": "parcel -p 9999 index.html",
-    "test": "node e2e/index.test.js --unhandled-rejections=strict"
+    "start": "parcel -p 9999 index.html"
   },
   "author": "Carlos Filoteo",
   "license": "MIT",
@@ -30,10 +29,5 @@
     "remark-attr": "^0.11.1",
     "tailwindcss": "^1.4.4",
     "wouter": "^2.5.1"
-  },
-  "devDependencies": {
-    "jest-process-manager": "^0.2.5",
-    "playwright": "^1.13.1",
-    "playwright-testing-library": "^2.2.0"
   }
 }

@@ -1,53 +1,52 @@
 import RebelAlliance from './img/rebel_alliance.svg';
 
 <div className="w-screen h-screen flex items-center justify-center text-white bg-black">
-
-
 <h1 className="text-5xl" style={{ transform: "perspective(400px) rotateX(40deg)" }}>
-
-
 <span>Building a Rebellion against</span>
-
 <RebelAlliance
   width="7rem"
   height="7rem"
   className="mx-auto"
   aria-hidden="true"
 />
-
 <span>the Monolith Empire</span>
-
 </h1>
-
-
 </div>
-
 
 ---
 
-# What are microfrontends?
+# What are **microfrontends**?
+
+---
+
+import Tweet from './img/twitter.com_markdalgleish_status_1150488911744917505.png'
+
+<div className="w-screen h-screen flex items-center justify-center text-white bg-black">
+
+<img src={Tweet} alt="A tweet from @markdalgleish that reads, 'Back end devs: Front end isn't real engineering. Front end devs: *Bring engineering principles to front end* Backend devs: Front end is too complicated.' shared on Jul 14, 2019." className="rounded-md border-2 border-gray-600" />
+
+</div>
 
 ---
 
 <p className="text-center block text-xl">microfrontends are</p>
 
-**Microservices patterns applied to frontend engineering**{.text-center .block .mb-4}
+## Microservices patterns applied to frontend engineering
+
+<div className="flex justify-center">
 
 - loosely coupled services, highly cohesive code
-- enables scalability
 - fosters team autonomy
+- improves scalability
+
+</div>
 
 ---
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
-<TwitterTweetEmbed tweetId="1150488911744917505" options={{ dnt: true }} />
-
-<p className="sr-only">
-  A tweet from @markdalgleish that reads, "Back end devs: Front end isn't real
-  engineering. Front end devs: *Bring engineering principles to front end* Back
-  end devs: Front end is too complicated." shared on Jul 14, 2019.
-</p>
+- loosely coupled → independent deployments
+- highly cohesive → code maintainability
+- fosters team autonomy → ownership
+- scalable → speed (Agile)
 
 ---
 
@@ -55,32 +54,9 @@ import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 1. Independent deployments
 2. Migration
-   - "Eat the 🐘" aka the 'Strangler Pattern'
+   - The 'Strangler Pattern'
 3. Experimentation
 4. Resilience
-
----
-
-import RebelBase from './img/rebel-base.jpg';
-
-<div
-  className="w-screen h-screen bg-center bg-cover"
-  style={{
-    backgroundImage: `url(${RebelBase})`,
-  }}
->
-  <p className="sr-only">
-    single-spa got its start at a scrappy startup (of rebels) named Canopy. It
-    was born out of Canopy's desire to use React + react-router instead of being
-    forever stuck with AngularJS + ui-router application. single-spa is now a
-    mature library that enables microfrontends.
-  </p>
-  <img
-    src="https://financesonline.com/uploads/2019/10/Canopy-logo1.png"
-    className="mx-auto w-1/5"
-    alt=""
-  />
-</div>
 
 ---
 
@@ -98,7 +74,7 @@ import ComponentModel from './img/component-model.png';
 
 <!-- https://excalidraw.com/#json=6328682335436800,YBcbfxpnnD1zZpREervmMA -->
 
-# the component model
+# Component model
 
 <img
   src={ComponentModel}
@@ -111,7 +87,7 @@ import ComponentModel from './img/component-model.png';
 
 import SingleSpaLifecyclesModel from './img/single-spa-lifecycles-model.png';
 
-# single-spa lifecycles
+# single-spa Lifecycles
 
 <img
   src={SingleSpaLifecyclesModel}
@@ -177,7 +153,6 @@ import SvelteSvg from './img/svelte.svg';
 
 <div className="flex items-center justify-between">
 
-
 <img
   alt="Reactjs"
   src="https://camo.githubusercontent.com/f81df8111223bbd67da1e3514bea41d5a63ff89a/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f72656163742e737667"
@@ -205,7 +180,6 @@ import SvelteSvg from './img/svelte.svg';
 
 <div className="flex justify-center">
 
-
 - AngularJS
 - Web Components
 - Preact
@@ -218,6 +192,80 @@ import SvelteSvg from './img/svelte.svg';
 
 ---
 
+import MillenniumFalcon from './img/millennium-falcon.svg'
+
+<div className="flex">
+<div className="w-1/2 inline-flex flex-col items-center justify-between">
+
+  <p className="text-2xl text-center">Shared dependencies</p>
+
+
+  <RebelAlliance
+    color="dimgray"
+    width="5rem"
+    className=""
+  />
+  
+  </div>
+  <div className="w-1/2 inline-flex flex-col items-center justify-between">
+
+  <p className="text-2xl text-center">Utility modules</p>
+
+  <MillenniumFalcon
+    color="dimgray"
+    width="5rem"
+    className=""
+  />
+
+</div>
+</div>
+
+---
+
+<p className="text-center text-2xl mb-6"><span className="block text-3xl">Utility modules</span> are for sharing common logic</p>
+
+- authentication/authorization
+- data fetching
+- styleguide/component library
+- notifications service
+- singleton libraries (eg. styled-components)
+
+
+https://single-spa.js.org/docs/recommended-setup/#utility-modules-styleguide-api-etc
+
+https://single-spa.js.org/docs/module-types/#utilities
+
+---
+
+<span className="text-2xl text-center">
+
+`import React from 'react'`
+
+</span>
+
+<div className="w-1/2 mt-3 ml-auto mr-auto">
+
+In a browser environment and no `node_modules` available, how to resolve what `'react'` is?
+
+</div>
+
+---
+
+# SystemJS & import maps
+
+
+> A module loader for all browsers supporting ES module semantics with the System module format.
+
+<div className="text-center">
+
+https://github.com/systemjs/systemjs
+
+https://github.com/WICG/import-maps/
+
+</div>
+
+---
+
 import DeathStarPlans from './img/deathstar-plans.gif';
 
 <div className="w-screen h-screen flex items-center justify-center bg-black">
@@ -227,22 +275,12 @@ import DeathStarPlans from './img/deathstar-plans.gif';
   />
 </div>
 
----
-
-<div
-  className="w-screen h-screen bg-center bg-no-repeat bg-contain"
-  style={{
-    backgroundImage:
-      'url(https://cdn.newsapi.com.au/image/v1/0f21f7db89ac6ec923ae8c5c2b185a95)',
-  }}
->
-  <p className="sr-only">
-    Once you understand the monolith, you can begin plans to break it up into
-    applications, utility modules, and shared dependencies. This architecture
-    will also require changes to engineering culture and development workflows.
-    All of those are tradeoffs to using microfrontends.
-  </p>
-</div>
+<p className="sr-only">
+  Once you understand the monolith, you can begin plans to break it up into
+  applications, utility modules, and shared dependencies. This architecture
+  will also require changes to engineering culture and development workflows.
+  All of those are tradeoffs to using microfrontends.
+</p>
 
 ---
 

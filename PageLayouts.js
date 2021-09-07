@@ -66,10 +66,10 @@ export function InitialPageLayout() {
       <SectionLeft style={{ backgroundColor: 'silver' }}>
         <Appear>TEAM X</Appear>
       </SectionLeft>
-      <SectionRight style={{ backgroundColor: 'gainsboro' }}>
+      <SectionRight style={{ backgroundColor: 'silver', borderLeft: '2px solid white' }}>
         <Appear>TEAM Y (but not really)</Appear>
       </SectionRight>
-      <SectionTop style={{ backgroundColor: 'dimgray' }}>
+      <SectionTop style={{ backgroundColor: 'silver', borderBottom: '2px solid white' }}>
         <Appear>???</Appear>
       </SectionTop>
     </Grid>
@@ -79,37 +79,19 @@ export function InitialPageLayout() {
 export function AssignedPageLayout() {
   return (
     <Grid>
-      <SectionLeft style={{ backgroundColor: 'lightpink' }}>
+      <SectionLeft style={{ backgroundColor: 'lightpink', color: 'red' }}>
         <Appear>
-          <RebelAlliance
-            width="2rem"
-            height="2rem"
-            className="mx-auto"
-            aria-hidden="true"
-            color="red"
-          />
+          <XWing width="4rem" className="mx-auto" aria-hidden="true" />
         </Appear>
       </SectionLeft>
-      <SectionRight style={{ backgroundColor: 'palegoldenrod' }}>
+      <SectionRight style={{ backgroundColor: 'palegoldenrod', color: 'goldenrod' }}>
         <Appear>
-          <RebelAlliance
-            width="2rem"
-            height="2rem"
-            className="mx-auto"
-            aria-hidden="true"
-            color="goldenrod"
-          />
+          <YWing width="5rem" className="mx-auto" aria-hidden="true" />
         </Appear>
       </SectionRight>
-      <SectionTop style={{ backgroundColor: 'lightblue' }}>
+      <SectionTop style={{ backgroundColor: 'lightblue', color: 'royalblue' }}>
         <Appear>
-          <RebelAlliance
-            width="2rem"
-            height="2rem"
-            className="mx-auto"
-            aria-hidden="true"
-            color="royalblue"
-          />
+          <BWing width="3rem" className="" aria-hidden="true" />
         </Appear>
       </SectionTop>
     </Grid>
@@ -154,6 +136,39 @@ export function ShipsPageLayout() {
             <li>slow</li>
             <li>large impact</li>
           </ul>
+        </SectionTop>
+      </Grid>
+    </div>
+  );
+}
+
+export function HelperShipsLayout() {
+  return (
+    <div className="relative">
+      <Grid>
+        <SectionLeft
+          style={{
+            backgroundColor: 'lightpink',
+            flexDirection: 'column',
+            color: 'red',
+          }}
+        >
+          <XWing width="4rem" className="mx-auto"/>
+        </SectionLeft>
+        <SectionRight
+          style={{
+            backgroundColor: 'palegoldenrod',
+            flexDirection: 'column',
+            color: 'goldenrod',
+          }}
+        >
+          <YWing width="5rem" className="mx-auto"/>
+          
+        </SectionRight>
+        <SectionTop
+          style={{ backgroundColor: 'lightblue', color: 'royalblue' }}
+        >
+          <BWing width="3rem" className=""/>
         </SectionTop>
       </Grid>
       <Appear>
